@@ -88,7 +88,9 @@ devsByPoint <- unlist(lapply(0:m, function(x){
 
 #inverse.rle will create a vector with each value of devsByPoint repeated waysByPoint-times (for the corresponding value in waysByPoint)
 allPossibleDevs <- inverse.rle(list(values = devsByPoint, lengths = waysByPoint))
-paste("mean: ", mean(allPossibleDevs)) #this should give the correct solution for mean and sd
+
+#what is the mean and sd of entire set of deviations?
+paste("mean: ", mean(allPossibleDevs))
 paste("sd: ", sd(allPossibleDevs))
 
 #what is the conditional probability that D is greater than 0.6 given that it is greater than 0.2?
